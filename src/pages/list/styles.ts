@@ -54,6 +54,14 @@ export const style = StyleSheet.create(
         },
         descriptionCard:{
             color: themas.colors.gray
+        },
+        button:{
+            backgroundColor: 'red',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: 100,
+            marginVertical: 10,
+            borderRadius: 10
         }
 
     }
