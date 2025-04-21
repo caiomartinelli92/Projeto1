@@ -14,7 +14,7 @@ import { Swipeable } from 'react-native-gesture-handler'
 
 export default function List(){
 
-    const {taskList, handleDelete, handleEdit} = useContext<AuthContextType>(AuthContextList)
+    const {taskList, handleDelete, handleEdit, filter} = useContext<AuthContextType>(AuthContextList)
     const swipeableRefs = useRef([])
 
     const renderRightActions = () => {
@@ -85,6 +85,7 @@ export default function List(){
                     <Input
                         IconLeft={MaterialIcons}
                         iconLeftName="search"
+                        onChangeText={(t) => filter(t)}
                     />
                 </View>
             </View>   

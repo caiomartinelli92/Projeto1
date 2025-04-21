@@ -18,22 +18,16 @@ export default function Login(){
 
     async function getLogin(){
         try{
-            SetLoading(true)
 
             if(!email || !password){
                 return Alert.alert('Atenção', 'Informe os campos obrigatórios!')
             }
 
-            setTimeout(() => {
-                if(email == 'Caio' && password == '123'){
-                    Alert.alert('Logado com sucesso!')
-                } else {
-                    Alert.alert('Usuário não encontrado!')
-                }
-                SetLoading(false)
-            }, 3000);
-
-            navigation.reset({routes:[{name:"BottomRoutes"}]})
+            if(email == 'caio@gmail.com' && password == '123'){
+                navigation.reset({routes:[{name:"BottomRoutes"}]})
+            }else {
+                Alert.alert('Atenção: credenciais inválidas!')
+            }            
 
         }catch (error){
             console.log(error)
